@@ -1,0 +1,87 @@
+<div *ngIf="indexEmployee < employeeSvc.employees.length">
+    <div class="row py-3">
+        <div class="col-12">
+            <h2>Employee Detail</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 col-md-2">
+            <b>Username</b>
+        </div>
+        <div class="col">
+            {{employeeSvc.employees[indexEmployee].username}} 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 col-md-2">
+            <b>First Name</b>
+        </div>
+        <div class="col">
+            {{employeeSvc.employees[indexEmployee].firstName}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 col-md-2">
+            <b>Last Name</b>
+        </div>
+        <div class="col">
+            {{employeeSvc.employees[indexEmployee].lastName}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 col-md-2">
+            <b>Email</b>
+        </div>
+        <div class="col">
+            {{employeeSvc.employees[indexEmployee].email}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 col-md-2">
+            <b>Birth Date</b>
+        </div>
+        <div class="col">
+            {{employeeSvc.employees[indexEmployee].birthDate}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 col-md-2">
+            <b>Basic Salary</b>
+        </div>
+        <div class="col">
+            Rp. {{(employeeSvc.employees[indexEmployee].basicSalary | number:'1.2-2') || '0.00'}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 col-md-2">
+            <b>Status</b>
+        </div>
+        <div class="col">
+            {{employeeSvc.employees[indexEmployee].status}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 col-md-2">
+            <b>Group</b>
+        </div>
+        <div class="col">
+            {{ getGroupName(employeeSvc.employees[indexEmployee].group) }}
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-4 col-md-2">
+            <b>Description</b>
+        </div>
+        <div class="col">
+            {{employeeSvc.employees[indexEmployee].description}}
+        </div>
+    </div>
+    <div class="row">
+        <div clas="col-12">
+            <button pButton pRipple label="Ok" class="p-button-submit" (click)="ok()"></button>
+        </div>
+    </div>
+</div>
+<div *ngIf="indexEmployee > employeeSvc.employees.length">
+    Out of Bond
+</div>

@@ -1,0 +1,38 @@
+<div class="row justify-content-center align-items-center h-100vh">
+    <div class="col-12 col-md-6">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2>Login</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-auto">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <div class="mb-2">
+                            <label for="email"><b>Email</b></label>
+                        </div>
+                        <div>
+                            <input class="form-control" id="email" type="email" pInputText [formControl]="fcEmail" [placeholder]="'e.g john.die@mail.com'"/>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="mb-2">
+                            <label for="password"><b>Password</b></label>
+                        </div>
+                        <div>
+                            <input class="form-control" type="password" id="password" [formControl]="fcPassword" required>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <button label="Login" (click)="goToEmployeeList()">Login
+                        </button>
+                    </div>
+                    <div class="col-12"*ngIf="errorLogin">
+                        <span class="error-message">{{this.errorMessage}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

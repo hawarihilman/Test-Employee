@@ -1,0 +1,27 @@
+@import '~primeng/resources/themes/saga-blue/theme.css';
+@import '~primeng/resources/primeng.min.css';
+.bg-gray {
+    background-color: lightgray;
+}
+.table-container {
+   height: 80vh;
+   overflow: auto; 
+   border: 1px solid black;
+   border-radius: 4px;
+}
+
+.bg-theader {
+    background-color: #6ea6e6;
+}
+.tbody {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    &:hover {
+        background-color: #d3dde8;
+    }
+    cursor: pointer;
+}
+
+button {
+    border-radius: 8px;
+}
